@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
 
@@ -11,8 +12,11 @@ while (counter < 3) {
     let number = Math.floor(Math.random() * 50);
     console.log(`Question: ${number}`);
     const answer = readlineSync.question('Your answer:');
+    if(answer !== 'yes' || answer !== 'no') {
+      console.log('Please, use yes or no for answer!');
+    }
     if (number % 2 === 0 && answer === 'yes') {
-      console.log('Correct');
+      console.log('Correct!');
       counter += 1;
     } else if (answer === 'yes') {
         console.log("'yes' is wrong answer ;(. Correct answer was 'no'");
