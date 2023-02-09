@@ -1,3 +1,4 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Valeriya-Makhmutova/js-starter-project-44/workflows/hexlet-check/badge.svg)](https://github.com/Valeriya-Makhmutova/js-starter-project-44/actions)  
 [![Maintainability](https://api.codeclimate.com/v1/badges/a668380234454cca5a2b/maintainability)](https://codeclimate.com/github/Valeriya-Makhmutova/js-starter-project-44/maintainability)
+(https://asciinema.org/a/8PK5VtLMLJFMN7rFarBHWLpdG)  
