@@ -5,4 +5,6 @@
 [![brain-calc] (https://asciinema.org/connect/587f4b07-3a73-4032-bc53-100f9f41cf61)] 
 [![brain-gcd] (https://asciinema.org/connect/587f4b07-3a73-4032-bc53-100f9f41cf61)]
 [![brain-progression] (https://asciinema.org/connect/587f4b07-3a73-4032-bc53-100f9f41cf61)]
+[![brain-prime] (https://asciinema.org/connect/587f4b07-3a73-4032-bc53-100f9f41cf61)]
+ 
 
