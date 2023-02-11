@@ -5,7 +5,7 @@ import {askNameAndGreet} from '../../src/cli.js';
 
 console.log('Welcome to the Brain Games!');
 console.log('May I have your name?');
-askNameAndGreet();
+const name = askNameAndGreet();
 console.log('Find the greatest common divisor of given numbers.');
 let i = 0;
 while (i < 3) {

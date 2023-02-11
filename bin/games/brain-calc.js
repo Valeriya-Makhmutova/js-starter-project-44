@@ -5,7 +5,7 @@ import {askNameAndGreet} from '../../src/cli.js';
 
 console.log('Welcome to the Brain Games!');
 console.log('May I have your name?');
-askNameAndGreet();
+const name = askNameAndGreet();
 console.log('What is the result of the expression?');
 let counter = 0;
 let resultOfExpression = 0;

@@ -5,7 +5,7 @@ import {askNameAndGreet} from '../../src/cli.js';
 
 console.log('Welcome to the Brain Games!');
 console.log('May I have your name?');
-askNameAndGreet();
+const name = askNameAndGreet();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 let counter = 0;
 
