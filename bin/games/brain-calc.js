@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import {askNameAndGreet} from '../../src/cli.js';
+
 
 console.log('Welcome to the Brain Games!');
 console.log('May I have your name?');
-const name = readlineSync.question('Your name:');
-console.log(`Hello, ${name}!`);
+askNameAndGreet();
 console.log('What is the result of the expression?');
 let counter = 0;
 let resultOfExpression = 0;

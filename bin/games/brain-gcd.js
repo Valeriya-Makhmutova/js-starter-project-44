@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import { getGeneralDivider } from '../../src/utils.js';
+import {askNameAndGreet} from '../../src/cli.js';
 
 console.log('Welcome to the Brain Games!');
 console.log('May I have your name?');
-const name = readlineSync.question('Your name:');
-console.log(`Hello, ${name}!`);
+askNameAndGreet();
 console.log('Find the greatest common divisor of given numbers.');
 let i = 0;
 while (i < 3) {
