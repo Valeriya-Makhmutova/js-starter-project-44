@@ -6,7 +6,7 @@ import {askNameAndGreet} from '../../src/cli.js';
 console.log('Welcome to the Brain Games!');
 console.log('May I have your name?');
 const name = askNameAndGreet();
-console.log('Answer "yes" if the number is prime, otherwise answer "no".');
+console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 let arrayWithNumbers = [];
 let i = 0;
 while (i < 50) {
