@@ -27,7 +27,7 @@ while (step < 3) {
         step += 1;
     }
     if (answer !== checkNumber) {
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${checkNumber}'\nLet's try again,${name}!`);
+        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${checkNumber}'\nLet's try again, ${name}!`);
         break;
     }
 }

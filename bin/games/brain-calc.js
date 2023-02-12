@@ -37,7 +37,7 @@ while (counter < 3) {
             console.log('Correct!');
     }
     if (answer !== resultOfExpression) {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${resultOfExpression}'\nLet's try again,${name}!`);
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${resultOfExpression}'\nLet's try again, ${name}!`);
     break;
     }
 }
