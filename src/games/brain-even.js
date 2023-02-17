@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
-import askNameAndGreet from '../../src/cli.js';
+import askNameAndGreet from '../cli.js';
 
 console.log('Welcome to the Brain Games!');
 console.log('May I have your name?');
