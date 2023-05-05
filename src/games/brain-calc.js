@@ -1,49 +1,26 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
-import askNameAndGreet from '../cli.js';
+import { sayHi, askNameAndGreet } from '../cli.js';
+import { playGame } from '../playGame.js';
 
 const brainCalc = () => {
-  console.log('Welcome to the Brain Games!');
-  console.log('May I have your name?');
+  sayHi();
   const name = askNameAndGreet();
-  console.log('What is the result of the expression?');
+  const gameConfig = [];
+
+  const operations = ['+', '-', '*'];
   let counter = 0;
-  let resultOfExpression = 0;
-  let expression = '';
-  const arrayOfSym = ['+', '-', '*'];
   while (counter < 3) {
     const firstNumber = Math.floor(Math.random() * 50);
     const secondNumber = Math.floor(Math.random() * 50);
     const indexOfArray = Math.floor(Math.random() * 3);
-    const symbol = arrayOfSym[indexOfArray];
-    if (symbol === '+') {
-      resultOfExpression = firstNumber + secondNumber;
-      expression = `${firstNumber} + ${secondNumber}`;
-      console.log(`Question: ${expression}`);
-    }
-    if (symbol === '-') {
-      resultOfExpression = firstNumber - secondNumber;
-      expression = `${firstNumber} - ${secondNumber}`;
-      console.log(`Question: ${expression}`);
-    }
-    if (symbol === '*') {
-      resultOfExpression = firstNumber * secondNumber;
-      expression = `${firstNumber} * ${secondNumber}`;
-      console.log(`Question: ${expression}`);
-    }
-    const answer = Number(readlineSync.question('Your answer:'));
-    if (answer === resultOfExpression) {
-      counter += 1;
-      console.log('Correct!');
-    }
-    if (answer !== resultOfExpression) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${resultOfExpression}'\nLet's try again, ${name}!`);
-      break;
-    }
+    const operation = operations[indexOfArray];
+    const expression = `${firstNumber} ${operation} ${secondNumber}`;
+    const answer = eval(expression);
+    gameConfig.push([expression, answer])
+    counter = counter + 1;
   }
-  if (counter === 3) {
-    console.log(`Congratulations, ${name}!`);
-  }
+  console.log('What is the result of the expression?');
+  playGame(gameConfig, name);
 };
 
 export default brainCalc;
