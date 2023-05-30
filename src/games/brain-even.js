@@ -3,6 +3,7 @@ import { sayHi, askNameAndGreet } from '../cli.js';
 import playGame from '../playGame.js';
 
 const brainEven = () => {
+  console.log('brain-even');
   sayHi();
   const name = askNameAndGreet();
   const gameConfig = [];
