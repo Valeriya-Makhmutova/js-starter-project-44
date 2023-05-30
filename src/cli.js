@@ -10,5 +10,3 @@ export const askNameAndGreet = () => {
   console.log(`Hello, ${name}!`);
   return name;
 };
-
-
