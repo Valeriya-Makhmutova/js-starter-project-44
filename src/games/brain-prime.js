@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { sayHi, askNameAndGreet } from '../cli.js';
-import { playGame } from '../playGame.js';
+import playGame from '../playGame.js';
 
 const brainPrime = () => {
   sayHi();
@@ -24,18 +24,16 @@ const brainPrime = () => {
     if (arrayForCheck.length > 3) {
       const answer = 'no';
       gameConfig.push([expression, answer]);
-      counter = counter + 1;
+      counter += 1;
     }
     if (arrayForCheck.length < 3) {
       const answer = 'yes';
       gameConfig.push([expression, answer]);
-      counter = counter + 1;
+      counter += 1;
     }
-
   }
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   playGame(gameConfig, name);
 };
 
 export default brainPrime;
-

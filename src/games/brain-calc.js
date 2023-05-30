@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { sayHi, askNameAndGreet } from '../cli.js';
-import { playGame } from '../playGame.js';
+import playGame from '../playGame.js';
 
 const brainCalc = () => {
   sayHi();
