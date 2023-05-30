@@ -15,9 +15,11 @@ const brainCalc = () => {
     const indexOfArray = Math.floor(Math.random() * 3);
     const operation = operations[indexOfArray];
     const expression = `${firstNumber} ${operation} ${secondNumber}`;
+    /* eslint-disable */
     const answer = eval(expression);
-    gameConfig.push([expression, answer])
-    counter = counter + 1;
+    /* eslint-enable */
+    gameConfig.push([expression, answer]);
+    counter += 1;
   }
   console.log('What is the result of the expression?');
   playGame(gameConfig, name);
