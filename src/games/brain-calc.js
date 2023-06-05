@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { sayHi, askNameAndGreet } from '../cli.js';
 import playGame from '../playGame.js';
+import generateNumber from '../number-generator.js';
 
 const startCalculationGame = () => {
   sayHi();
@@ -11,9 +12,10 @@ const startCalculationGame = () => {
   const operations = ['+', '-', '*'];
   let counter = 0;
   while (counter < minNumberOfQuestions) {
-    const firstNumber = Math.floor(Math.random() * 50);
-    const secondNumber = Math.floor(Math.random() * 50);
-    const indexOfArray = Math.floor(Math.random() * 3);
+    const firstNumber = generateNumber(1, 50);
+    const secondNumber = generateNumber(1, 50);
+    const indexOfArray = generateNumber(0, 2);
+    console.log(indexOfArray);
     const operation = operations[indexOfArray];
     const expression = `${firstNumber} ${operation} ${secondNumber}`;
     /* eslint-disable */

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { sayHi, askNameAndGreet } from '../cli.js';
 import playGame from '../playGame.js';
+import generateNumber from '../number-generator.js';
 
 const startPrimeOrNotNumberGame = () => {
   sayHi();
@@ -8,9 +9,10 @@ const startPrimeOrNotNumberGame = () => {
   const gameConfig = [];
   const arrayWithNumbers = [];
   const minNumberOfQuestions = 3;
+  const numberOfDigits = 50;
 
   let i = 0;
-  while (i < 50) {
+  while (i < numberOfDigits) {
     arrayWithNumbers.push(i);
     i += 1;
   }
@@ -18,7 +20,7 @@ const startPrimeOrNotNumberGame = () => {
   while (counter < minNumberOfQuestions) {
     const maxDividersForPrimeNum = 3;
     const arrayForCheck = [];
-    const expression = Math.floor(Math.random() * 50);
+    const expression = generateNumber(1, 50);
     
     for (let index = 0; index < arrayWithNumbers.length; index += 1) {
       if (expression % arrayWithNumbers[index] === 0) {

@@ -2,6 +2,7 @@
 import { sayHi, askNameAndGreet } from '../cli.js';
 import playGame from '../playGame.js';
 import { getGeneralDivider } from '../utils.js';
+import generateNumber from '../number-generator.js';
 
 const startGreatestCommonDivisorGame = () => {
   sayHi();
@@ -11,8 +12,8 @@ const startGreatestCommonDivisorGame = () => {
 
   let counter = 0;
   while (counter < minNumberOfQuestions) {
-    const firstNum = Math.floor(Math.random() * 100);
-    const secondNum = Math.floor(Math.random() * 100);
+    const firstNum = generateNumber(1, 100);
+    const secondNum = generateNumber(1, 100);
     const expression = `${firstNum} ${secondNum}`;
     const answer = getGeneralDivider(firstNum, secondNum);
     gameConfig.push([expression, answer]);

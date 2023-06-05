@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { sayHi, askNameAndGreet } from '../cli.js';
 import playGame from '../playGame.js';
+import generateNumber from '../number-generator.js';
 
 const startEvenOrNotGame = () => {
   console.log('brain-even');
@@ -11,7 +12,7 @@ const startEvenOrNotGame = () => {
 
   let counter = 0;
   while (counter < minNumberOfQuestions) {
-    const number = Math.floor(Math.random() * 50);
+    const number = generateNumber(1, 50);
     if (number % 2 === 0) {
       const answer = 'yes';
       gameConfig.push([number, answer]);
