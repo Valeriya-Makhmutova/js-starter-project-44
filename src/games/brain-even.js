@@ -7,9 +7,10 @@ const startEvenOrNotGame = () => {
   sayHi();
   const name = askNameAndGreet();
   const gameConfig = [];
+  const minNumberOfQuestions = 3;
 
   let counter = 0;
-  while (counter < 3) {
+  while (counter < minNumberOfQuestions) {
     const number = Math.floor(Math.random() * 50);
     if (number % 2 === 0) {
       const answer = 'yes';

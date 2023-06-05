@@ -6,19 +6,23 @@ const startComplitProgressionGame = () => {
   sayHi();
   const name = askNameAndGreet();
   const gameConfig = [];
+  const minNumberOfQuestions = 3;
 
   let counter = 0;
-  while (counter < 3) {
+  while (counter < minNumberOfQuestions) {
     const array = [];
     let randomNumber = Math.floor(Math.random() * 20);
     const different = Math.floor(Math.random() * 10);
     let index = 0;
-    while (index < 10) {
+    const numbersInProgression = 10;
+    const knownNumbers = 9;
+
+    while (index < numbersInProgression) {
       array.push(randomNumber);
       randomNumber += different;
       index += 1;
     }
-    const i = Math.floor(Math.random() * 9);
+    const i = Math.floor(Math.random() * knownNumbers);
     const checkNumber = array[i];
     array[i] = '..';
 

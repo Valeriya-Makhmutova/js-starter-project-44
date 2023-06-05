@@ -7,26 +7,30 @@ const startPrimeOrNotNumberGame = () => {
   const name = askNameAndGreet();
   const gameConfig = [];
   const arrayWithNumbers = [];
+  const minNumberOfQuestions = 3;
+
   let i = 0;
   while (i < 50) {
     arrayWithNumbers.push(i);
     i += 1;
   }
   let counter = 0;
-  while (counter < 3) {
+  while (counter < minNumberOfQuestions) {
+    const maxDividersForPrimeNum = 3;
     const arrayForCheck = [];
     const expression = Math.floor(Math.random() * 50);
+    
     for (let index = 0; index < arrayWithNumbers.length; index += 1) {
       if (expression % arrayWithNumbers[index] === 0) {
         arrayForCheck.push(arrayWithNumbers[index]);
       }
     }
-    if (arrayForCheck.length > 3) {
+    if (arrayForCheck.length > maxDividersForPrimeNum) {
       const answer = 'no';
       gameConfig.push([expression, answer]);
       counter += 1;
     }
-    if (arrayForCheck.length < 3) {
+    if (arrayForCheck.length < maxDividersForPrimeNum) {
       const answer = 'yes';
       gameConfig.push([expression, answer]);
       counter += 1;

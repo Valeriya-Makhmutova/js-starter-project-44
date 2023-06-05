@@ -6,10 +6,11 @@ const startCalculationGame = () => {
   sayHi();
   const name = askNameAndGreet();
   const gameConfig = [];
+  const minNumberOfQuestions = 3;
 
   const operations = ['+', '-', '*'];
   let counter = 0;
-  while (counter < 3) {
+  while (counter < minNumberOfQuestions) {
     const firstNumber = Math.floor(Math.random() * 50);
     const secondNumber = Math.floor(Math.random() * 50);
     const indexOfArray = Math.floor(Math.random() * 3);

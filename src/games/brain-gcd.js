@@ -7,9 +7,10 @@ const startGreatestCommonDivisorGame = () => {
   sayHi();
   const name = askNameAndGreet();
   const gameConfig = [];
+  const minNumberOfQuestions = 3;
 
   let counter = 0;
-  while (counter < 3) {
+  while (counter < minNumberOfQuestions) {
     const firstNum = Math.floor(Math.random() * 100);
     const secondNum = Math.floor(Math.random() * 100);
     const expression = `${firstNum} ${secondNum}`;
