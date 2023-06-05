@@ -2,7 +2,7 @@
 import { sayHi, askNameAndGreet } from '../cli.js';
 import playGame from '../playGame.js';
 
-const brainProgression = () => {
+const startComplitProgressionGame = () => {
   sayHi();
   const name = askNameAndGreet();
   const gameConfig = [];
@@ -31,4 +31,4 @@ const brainProgression = () => {
   playGame(gameConfig, name);
 };
 
-export default brainProgression;
+export default startComplitProgressionGame;

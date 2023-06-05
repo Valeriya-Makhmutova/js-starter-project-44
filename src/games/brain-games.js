@@ -2,9 +2,9 @@
 import { sayHi, askNameAndGreet } from '../cli.js';
 
 
-const brainGames = () => {
+const startBrainGames = () => {
 sayHi();
 askNameAndGreet();
 };
 
-export default brainGames;
+export default startBrainGames;

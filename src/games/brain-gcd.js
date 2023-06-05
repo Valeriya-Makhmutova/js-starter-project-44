@@ -3,7 +3,7 @@ import { sayHi, askNameAndGreet } from '../cli.js';
 import playGame from '../playGame.js';
 import { getGeneralDivider } from '../utils.js';
 
-const brainGcd = () => {
+const startGreatestCommonDivisorGame = () => {
   sayHi();
   const name = askNameAndGreet();
   const gameConfig = [];
@@ -21,4 +21,4 @@ const brainGcd = () => {
   playGame(gameConfig, name);
 };
 
-export default brainGcd;
+export default startGreatestCommonDivisorGame;

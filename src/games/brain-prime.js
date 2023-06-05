@@ -2,7 +2,7 @@
 import { sayHi, askNameAndGreet } from '../cli.js';
 import playGame from '../playGame.js';
 
-const brainPrime = () => {
+const startPrimeOrNotNumberGame = () => {
   sayHi();
   const name = askNameAndGreet();
   const gameConfig = [];
@@ -36,4 +36,4 @@ const brainPrime = () => {
   playGame(gameConfig, name);
 };
 
-export default brainPrime;
+export default startPrimeOrNotNumberGame;

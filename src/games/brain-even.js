@@ -2,7 +2,7 @@
 import { sayHi, askNameAndGreet } from '../cli.js';
 import playGame from '../playGame.js';
 
-const brainEven = () => {
+const startEvenOrNotGame = () => {
   console.log('brain-even');
   sayHi();
   const name = askNameAndGreet();
@@ -25,4 +25,4 @@ const brainEven = () => {
   playGame(gameConfig, name);
 };
 
-export default brainEven;
+export default startEvenOrNotGame;
