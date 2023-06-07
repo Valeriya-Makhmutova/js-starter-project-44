@@ -2,6 +2,7 @@
 import { sayHi, askNameAndGreet } from '../cli.js';
 import playGame from '../playGame.js';
 import generateNumber from '../number-generator.js';
+import calculateExpression from '../mini-calculator.js'
 
 const startCalculationGame = () => {
   sayHi();
@@ -15,12 +16,9 @@ const startCalculationGame = () => {
     const firstNumber = generateNumber(1, 50);
     const secondNumber = generateNumber(1, 50);
     const indexOfArray = generateNumber(0, 2);
-    console.log(indexOfArray);
     const operation = operations[indexOfArray];
     const expression = `${firstNumber} ${operation} ${secondNumber}`;
-    /* eslint-disable */
-    const answer = eval(expression);
-    /* eslint-enable */
+    const answer = calculateExpression(firstNumber, operation, secondNumber);
     gameConfig.push([expression, answer]);
     counter += 1;
   }
