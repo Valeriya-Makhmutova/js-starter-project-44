@@ -8,23 +8,24 @@
 * Прогрессия
 
 ## Использование
-Инструкция по установке проекта:<пробел></пробел>
+
+Инструкция по установке проекта:
 1. Для использования проекта локально необходимо создать копию репозитория и склонировать его на свой компьютер
 2. Установите зависимости npm:<пробел></пробел>
-`make install`
-3. Запустите проект:<пробел></пробел>
-* Запуск приветствия: <пробел></пробел>
-`make brain-games`
+>`make install`
+3. Запустите проект:
+* Запуск приветствия:
+>`make brain-games`
 * Запуск игры на определение чётности числа:<пробел></пробел>
-`make brain-even`
-* Запуск калькулятора:<пробел></пробел>
-`make brain-calc`
+>`make brain-even`
+* Запуск калькулятора:
+>`make brain-calc`
 * Запуск игры на определение НОД числа:<пробел></пробел>
-`make brain-gcd`
-* Запуск игры на определение простых чисел:<пробел></пробел>
-`make brain-prime`
+>`make brain-gcd`
+* Запуск игры на определение простых чисел:
+>`make brain-prime`
 * Запуск игры на нахождение пропущенного числа в числовой прогрессии:<пробел></пробел>
-`make progression`
+>`make progression`
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Valeriya-Makhmutova/js-starter-project-44/workflows/hexlet-check/badge.svg)](https://github.com/Valeriya-Makhmutova/js-starter-project-44/actions)  
