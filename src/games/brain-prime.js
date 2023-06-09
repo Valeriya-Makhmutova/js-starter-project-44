@@ -27,7 +27,7 @@ const startPrimeOrNotNumberGame = () => {
         arrayForCheck.push(arrayWithNumbers[index]);
       }
     }
-    if (arrayForCheck.length > maxDividersForPrimeNum) {
+    if (arrayForCheck.length >= maxDividersForPrimeNum) {
       answer = 'no';
     }
     if (arrayForCheck.length < maxDividersForPrimeNum) {
