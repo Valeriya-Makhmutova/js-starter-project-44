@@ -20,7 +20,7 @@ const startPrimeOrNotNumberGame = () => {
 
     const maxDividersForPrimeNum = 3;
     const arrayForCheck = [];
-    const question = generateNumber(1, 50);
+    const question = generateNumber(2, 50);
 
     for (let index = 0; index < arrayWithNumbers.length; index += 1) {
       if (question % arrayWithNumbers[index] === 0) {
