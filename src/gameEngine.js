@@ -1,6 +1,5 @@
-import { askNameAndGreet, sayHi } from "./helpers/cli.js";
 import readlineSync from 'readline-sync';
-
+import { askNameAndGreet, sayHi } from './helpers/cli.js';
 
 const gameEngine = (gameRules, gameFunction) => {
   let name = '';
@@ -31,6 +30,5 @@ const gameEngine = (gameRules, gameFunction) => {
   }
   if (counter === repeats) console.log(`Congratulations, ${name}!`);
 };
-
 
 export default gameEngine;
