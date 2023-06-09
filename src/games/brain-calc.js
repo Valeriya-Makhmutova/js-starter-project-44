@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 import gameEngine from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
-import calculateExpression from '../helpers/mini-calculator.js'
+import calculateExpression from '../helpers/mini-calculator.js';
 
 const startCalculationGame = () => {
   const repeats = 3;
   const greeting = true;
-  const task = 'What is the result of the expression?'
+  const task = 'What is the result of the expression?';
   const gameRules = [task, repeats, greeting];
 
   const getBrainCalc = () => {

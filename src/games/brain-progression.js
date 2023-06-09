@@ -8,7 +8,6 @@ const startComplitProgressionGame = () => {
   const task = 'What number is missing in the progression?';
   const gameRules = [task, repeats, greeting];
 
-
   const getBrainProgression = () => {
     const array = [];
     let randomNumber = generateNumber(1, 20);

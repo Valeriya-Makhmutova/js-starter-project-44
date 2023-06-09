@@ -1,10 +1,9 @@
 #!/usr/bin/env node
-import { sayHi, askNameAndGreet } from '../cli.js';
-
+import { sayHi, askNameAndGreet } from '../helpers/cli.js';
 
 const startBrainGames = () => {
-sayHi();
-askNameAndGreet();
+    sayHi();
+    askNameAndGreet();
 };
 
 export default startBrainGames;

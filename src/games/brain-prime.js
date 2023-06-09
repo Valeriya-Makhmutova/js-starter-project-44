@@ -8,7 +8,6 @@ const startPrimeOrNotNumberGame = () => {
   const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const gameRules = [task, repeats, greeting];
 
-
   const getBrainPrime = () => {
     let answer = '';
     const arrayWithNumbers = [];
