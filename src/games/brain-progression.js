@@ -1,23 +1,21 @@
 #!/usr/bin/env node
-import { sayHi, askNameAndGreet } from '../cli.js';
-import playGame from '../playGame.js';
-import generateNumber from '../number-generator.js';
+import gameEngine from '../gameEngine.js';
+import generateNumber from '../helpers/number-generator.js';
 
 const startComplitProgressionGame = () => {
-  sayHi();
-  const name = askNameAndGreet();
-  const gameConfig = [];
-  const minNumberOfQuestions = 3;
+  const repeats = 3;
+  const greeting = true;
+  const task = 'What number is missing in the progression?';
+  const gameRules = [task, repeats, greeting];
 
-  let counter = 0;
-  while (counter < minNumberOfQuestions) {
+
+  const getBrainProgression = () => {
     const array = [];
     let randomNumber = generateNumber(1, 20);
     const different = generateNumber(1, 10);
     let index = 0;
     const numbersInProgression = 10;
     const knownNumbers = 9;
-
     while (index < numbersInProgression) {
       array.push(randomNumber);
       randomNumber += different;
@@ -26,14 +24,13 @@ const startComplitProgressionGame = () => {
     const i = generateNumber(1, knownNumbers);
     const checkNumber = array[i];
     array[i] = '..';
-
-    const expression = `${array.join(' ')}`;
+    const question = `${array.join(' ')}`;
     const answer = checkNumber;
-    gameConfig.push([expression, answer]);
-    counter += 1;
-  }
-  console.log('What number is missing in the progression?');
-  playGame(gameConfig, name);
+    const result = [question, answer];
+    return result;
+  };
+
+  gameEngine(gameRules, getBrainProgression);
 };
 
 export default startComplitProgressionGame;
