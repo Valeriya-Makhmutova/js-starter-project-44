@@ -15,6 +15,7 @@ const calculateExpression = (Num1, operator, Num2) => {
     const answer = Num1 / Num2;
     return answer;
   }
+  return null;
 };
 
 export default calculateExpression;
