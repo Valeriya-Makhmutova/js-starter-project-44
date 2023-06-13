@@ -4,9 +4,8 @@ import generateNumber from '../helpers/number-generator.js';
 
 const startComplitProgressionGame = () => {
   const repeats = 3;
-  const greeting = true;
   const task = 'What number is missing in the progression?';
-  const gameRules = [task, repeats, greeting];
+  const gameRules = [task, repeats];
 
   const getBrainProgression = () => {
     const array = [];

@@ -4,9 +4,8 @@ import generateNumber from '../helpers/number-generator.js';
 
 const startPrimeOrNotNumberGame = () => {
   const repeats = 3;
-  const greeting = true;
   const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const gameRules = [task, repeats, greeting];
+  const gameRules = [task, repeats];
 
   const getBrainPrime = () => {
     let answer = '';

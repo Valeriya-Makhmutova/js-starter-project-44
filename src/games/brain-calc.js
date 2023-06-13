@@ -5,9 +5,8 @@ import calculateExpression from '../helpers/mini-calculator.js';
 
 const startCalculationGame = () => {
   const repeats = 3;
-  const greeting = true;
   const task = 'What is the result of the expression?';
-  const gameRules = [task, repeats, greeting];
+  const gameRules = [task, repeats];
 
   const getBrainCalc = () => {
     const operations = ['+', '-', '*'];

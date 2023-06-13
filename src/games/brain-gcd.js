@@ -5,9 +5,8 @@ import generateNumber from '../helpers/number-generator.js';
 
 const startGreatestCommonDivisorGame = () => {
   const repeats = 3;
-  const greeting = true;
   const task = 'Find the greatest common divisor of given numbers.';
-  const gameRules = [task, repeats, greeting];
+  const gameRules = [task, repeats];
 
   const getBrainGcd = () => {
     const firstNum = generateNumber(1, 100);

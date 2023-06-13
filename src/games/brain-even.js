@@ -4,9 +4,8 @@ import generateNumber from '../helpers/number-generator.js';
 
 const startEvenOrNotGame = () => {
   const repeats = 3;
-  const greeting = true;
   const task = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const gameRules = [task, repeats, greeting];
+  const gameRules = [task, repeats];
 
   const getBrainEven = () => {
     const question = generateNumber(1, 50);
