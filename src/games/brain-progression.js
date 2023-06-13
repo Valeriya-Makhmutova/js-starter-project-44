@@ -3,9 +3,8 @@ import gameEngine from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
 
 const startComplitProgressionGame = () => {
-  const repeats = 3;
   const task = 'What number is missing in the progression?';
-  const gameRules = [task, repeats];
+  const gameRules = [task];
 
   const getBrainProgression = () => {
     const array = [];

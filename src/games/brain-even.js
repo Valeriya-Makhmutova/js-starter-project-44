@@ -3,9 +3,8 @@ import gameEngine from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
 
 const startEvenOrNotGame = () => {
-  const repeats = 3;
   const task = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const gameRules = [task, repeats];
+  const gameRules = [task];
 
   const getBrainEven = () => {
     const question = generateNumber(1, 50);

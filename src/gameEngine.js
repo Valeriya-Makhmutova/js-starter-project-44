@@ -3,8 +3,8 @@ import { askNameAndGreet, sayHi } from './helpers/cli.js';
 
 const gameEngine = (gameRules, gameFunction) => {
   let name = '';
-  let counter = 0;
-  const [task, repeats] = gameRules;
+  const repeats = 3;
+  const [task] = gameRules;
   sayHi();
   name = askNameAndGreet();
   console.log(task);

@@ -4,9 +4,8 @@ import generateNumber from '../helpers/number-generator.js';
 import calculateExpression from '../helpers/mini-calculator.js';
 
 const startCalculationGame = () => {
-  const repeats = 3;
   const task = 'What is the result of the expression?';
-  const gameRules = [task, repeats];
+  const gameRules = [task];
 
   const getBrainCalc = () => {
     const operations = ['+', '-', '*'];
