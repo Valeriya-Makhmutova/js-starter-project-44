@@ -12,7 +12,7 @@ const startCalculationGame = () => {
   const getBrainCalc = () => {
     const firstNumber = generateNumber(1, 50);
     const secondNumber = generateNumber(1, 50);
-    const indexOfArray = generateNumber(0, 2);
+    const indexOfArray = generateNumber(0, operations.length - 1);
     const operation = operations[indexOfArray];
     const question = `${firstNumber} ${operation} ${secondNumber}`;
     const answer = calculateExpression(firstNumber, operation, secondNumber);
