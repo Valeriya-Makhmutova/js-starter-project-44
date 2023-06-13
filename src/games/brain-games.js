@@ -1,8 +1,7 @@
 #!/usr/bin/env node
-import { sayHi, askNameAndGreet } from '../helpers/cli.js';
+import askNameAndGreet  from '../helpers/cli.js';
 
 const startBrainGames = () => {
-  sayHi();
   askNameAndGreet();
 };
 
