@@ -7,8 +7,9 @@ const startCalculationGame = () => {
   const task = 'What is the result of the expression?';
   const gameRules = [task];
 
+  const operations = ['+', '-', '*'];
+
   const getBrainCalc = () => {
-    const operations = ['+', '-', '*'];
     const firstNumber = generateNumber(1, 50);
     const secondNumber = generateNumber(1, 50);
     const indexOfArray = generateNumber(0, 2);
