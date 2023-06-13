@@ -1,12 +1,14 @@
 import readlineSync from 'readline-sync';
-import { askNameAndGreet, sayHi } from './helpers/cli.js';
 
 const gameEngine = (gameRules, gameFunction) => {
-  let name = '';
   const repeats = 3;
   const [task] = gameRules;
-  sayHi();
-  name = askNameAndGreet();
+
+  console.log('Welcome to the Brain Games!');
+  console.log('May I have your name?');
+  const name = readlineSync.question('Your name:');
+  console.log(`Hello, ${name}!`);
+
   console.log(task);
   let i = 0;
   for (; i < repeats; i += 1) {

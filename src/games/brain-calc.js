@@ -1,7 +1,26 @@
 #!/usr/bin/env node
 import gameEngine from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
-import calculateExpression from '../helpers/mini-calculator.js';
+
+const calculateExpression = (Num1, operator, Num2) => {
+  if (operator === '+') {
+    const answer = Num1 + Num2;
+    return answer;
+  }
+  if (operator === '-') {
+    const answer = Num1 - Num2;
+    return answer;
+  }
+  if (operator === '*') {
+    const answer = Num1 * Num2;
+    return answer;
+  }
+  if (operator === '/') {
+    const answer = Num1 / Num2;
+    return answer;
+  }
+  return null;
+};
 
 const startCalculationGame = () => {
   const task = 'What is the result of the expression?';
