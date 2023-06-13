@@ -2,24 +2,25 @@
 import gameEngine from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
 
-const calculateExpression = (Num1, operator, Num2) => {
-  if (operator === '+') {
-    const answer = Num1 + Num2;
-    return answer;
+const calculateExpression = (num1, operator, num2) => {
+  let answer;
+  switch (operator) {
+    case '+':
+      answer = num1 + num2;
+      break;
+    case '-':
+      answer = num1 - num2;
+      break;
+    case '*':
+      answer = num1 * num2;
+      break;
+    case '/':
+      answer = num1 / num2;
+      break;
+    default:
+      throw new Error(`Unknown order state: '${operator}'!`);
   }
-  if (operator === '-') {
-    const answer = Num1 - Num2;
-    return answer;
-  }
-  if (operator === '*') {
-    const answer = Num1 * Num2;
-    return answer;
-  }
-  if (operator === '/') {
-    const answer = Num1 / Num2;
-    return answer;
-  }
-  return null;
+  return answer;
 };
 
 const startCalculationGame = () => {
