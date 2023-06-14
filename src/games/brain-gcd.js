@@ -1,7 +1,20 @@
 #!/usr/bin/env node
 import gameEngine from '../gameEngine.js';
-import { getGeneralDivider } from '../helpers/utils.js';
 import generateNumber from '../helpers/number-generator.js';
+
+const getMaxOfArray = (numArray) => Math.max.apply(null, numArray);
+
+const getGeneralDivider = (firstNum, secondNum) => {
+  const arrayOfGeneralDividers = [];
+  let counter = 1;
+  while ((firstNum / counter) >= 1 || (secondNum / counter) >= 1) {
+    if (firstNum % counter === 0 && secondNum % counter === 0) {
+      arrayOfGeneralDividers.push(counter);
+    }
+    counter += 1;
+  }
+  return getMaxOfArray(arrayOfGeneralDividers);
+};
 
 const startGreatestCommonDivisorGame = () => {
   const task = 'Find the greatest common divisor of given numbers.';
