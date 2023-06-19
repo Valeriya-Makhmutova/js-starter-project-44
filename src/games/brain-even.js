@@ -20,8 +20,7 @@ const startEvenOrNotGame = () => {
 
     isEvenNumber(question) ? answer = 'yes' : answer = 'no';
     
-    const result = [question, answer];
-    return result;
+    return [question, answer];
   };
   gameEngine(gameRules, getBrainEven);
 };

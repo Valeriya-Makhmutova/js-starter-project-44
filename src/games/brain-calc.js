@@ -36,8 +36,7 @@ const startCalculationGame = () => {
     const operation = operations[indexOfArray];
     const question = `${firstNumber} ${operation} ${secondNumber}`;
     const answer = calculateExpression(firstNumber, operation, secondNumber);
-    const result = [question, answer];
-    return result;
+    return [question, answer];
   };
   gameEngine(gameRules, getBrainCalc);
 };

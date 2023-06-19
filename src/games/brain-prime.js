@@ -31,8 +31,7 @@ const startPrimeOrNotNumberGame = () => {
     if (arrayForCheck.length < maxDividersForPrimeNum) {
       answer = 'yes';
     }
-    const result = [question, answer];
-    return result;
+    return [question, answer];
   };
   gameEngine(gameRules, getBrainPrime);
 };

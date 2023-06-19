@@ -24,8 +24,7 @@ const startGreatestCommonDivisorGame = () => {
     const secondNum = generateNumber(1, 100);
     const question = `${firstNum} ${secondNum}`;
     const answer = getGeneralDivider(firstNum, secondNum);
-    const result = [question, answer];
-    return result;
+    return [question, answer];
   };
 
   gameEngine(gameRules, getBrainGcd);

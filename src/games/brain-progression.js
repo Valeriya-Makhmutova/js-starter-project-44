@@ -23,8 +23,7 @@ const startComplitProgressionGame = () => {
     array[i] = '..';
     const question = `${array.join(' ')}`;
     const answer = checkNumber;
-    const result = [question, answer];
-    return result;
+    return [question, answer];
   };
 
   gameEngine(gameRules, getBrainProgression);
