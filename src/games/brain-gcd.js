@@ -2,17 +2,17 @@
 import gameEngine from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
 
-const getGeneralDivider = (firstNum, secondNum) => {
-  while (firstNum != secondNum) {
+const getGeneralDivider = (a, b) => {
+  let firstNum = a;
+  let secondNum = b;
+  while (firstNum !== secondNum) {
     if (firstNum > secondNum) {
       firstNum -= secondNum;
-    }
-    else {
+    } else {
       secondNum -= firstNum;
     }
   }
-  const result = firstNum;
-  return result;
+  return firstNum;
 };
 
 const startGreatestCommonDivisorGame = () => {

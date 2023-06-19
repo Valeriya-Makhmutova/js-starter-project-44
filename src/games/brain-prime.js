@@ -5,7 +5,7 @@ import generateNumber from '../helpers/number-generator.js';
 const isPrimeNumber = (number) => {
   let flag = true;
   for (let i = 2; i <= number - 1; i += 1) {
-    if (number % i === 0 && number != i) {
+    if (number % i === 0 && number !== i) {
       flag = false;
     }
   }
@@ -19,7 +19,12 @@ const startPrimeOrNotNumberGame = () => {
   const getBrainPrime = () => {
     let answer = '';
     const question = generateNumber(2, 50);
-    isPrimeNumber(question) ? answer = 'yes' : answer = 'no';
+
+    if (isPrimeNumber(question)) {
+      answer = 'yes';
+    } else {
+      answer = 'no';
+    }
     return [question, answer];
   };
   gameEngine(gameRules, getBrainPrime);
