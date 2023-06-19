@@ -1,9 +1,5 @@
 const generateNumber = (min, max) => {
-  let number = -1;
-  while (number < min || number > max) {
-    number = Math.floor(Math.random() * (max + 1));
-  }
-  return number;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
 export default generateNumber;
