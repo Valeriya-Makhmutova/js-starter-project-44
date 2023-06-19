@@ -2,27 +2,29 @@
 import gameEngine from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
 
+const generateProgression = (lengthOfProgression = 10) => {
+  const array = [];
+  let randomNumber = generateNumber(1, 20);
+  const different = generateNumber(1, 10);
+  for (let i = 0; i < lengthOfProgression; i += 1) {
+    array.push(randomNumber);
+    randomNumber += different;
+  }
+  return array;
+};
+
 const startComplitProgressionGame = () => {
   const task = 'What number is missing in the progression?';
   const gameRules = [task];
 
   const getBrainProgression = () => {
-    const array = [];
-    let randomNumber = generateNumber(1, 20);
-    const different = generateNumber(1, 10);
-    let index = 0;
-    const numbersInProgression = 10;
+    const lengthOfProgression = 10;
     const knownNumbers = 9;
-    while (index < numbersInProgression) {
-      array.push(randomNumber);
-      randomNumber += different;
-      index += 1;
-    }
-    const i = generateNumber(1, knownNumbers);
-    const checkNumber = array[i];
-    array[i] = '..';
-    const question = `${array.join(' ')}`;
-    const answer = checkNumber;
+    const indexOfMissingNumber = generateNumber(1, knownNumbers);
+    const progression = generateProgression(lengthOfProgression);
+    const answer = progression[indexOfMissingNumber];
+    progression[indexOfMissingNumber] = '..';
+    const question = `${progression.join(' ')}`;
     return [question, answer];
   };
 
