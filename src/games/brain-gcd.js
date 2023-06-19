@@ -2,18 +2,17 @@
 import gameEngine from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
 
-const getMaxOfArray = (numArray) => Math.max.apply(null, numArray);
-
 const getGeneralDivider = (firstNum, secondNum) => {
-  const arrayOfGeneralDividers = [];
-  let counter = 1;
-  while ((firstNum / counter) >= 1 || (secondNum / counter) >= 1) {
-    if (firstNum % counter === 0 && secondNum % counter === 0) {
-      arrayOfGeneralDividers.push(counter);
+  while (firstNum != secondNum) {
+    if (firstNum > secondNum) {
+      firstNum -= secondNum;
     }
-    counter += 1;
+    else {
+      secondNum -= firstNum;
+    }
   }
-  return getMaxOfArray(arrayOfGeneralDividers);
+  const result = firstNum;
+  return result;
 };
 
 const startGreatestCommonDivisorGame = () => {
@@ -28,6 +27,7 @@ const startGreatestCommonDivisorGame = () => {
     const result = [question, answer];
     return result;
   };
+
   gameEngine(gameRules, getBrainGcd);
 };
 
