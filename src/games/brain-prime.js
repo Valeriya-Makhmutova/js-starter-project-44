@@ -2,35 +2,24 @@
 import gameEngine from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
 
+const isPrimeNumber = (number) => {
+  let flag = true;
+  for (let i = 2; i <= number - 1; i += 1) {
+    if (number % i === 0 && number != i) {
+      flag = false;
+    }
+  }
+  return flag;
+};
+
 const startPrimeOrNotNumberGame = () => {
   const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const gameRules = [task];
 
   const getBrainPrime = () => {
     let answer = '';
-    const arrayWithNumbers = [];
-    const numberOfDigits = 50;
-    let i = 0;
-    while (i < numberOfDigits) {
-      arrayWithNumbers.push(i);
-      i += 1;
-    }
-
-    const maxDividersForPrimeNum = 3;
-    const arrayForCheck = [];
     const question = generateNumber(2, 50);
-
-    for (let index = 0; index < arrayWithNumbers.length; index += 1) {
-      if (question % arrayWithNumbers[index] === 0) {
-        arrayForCheck.push(arrayWithNumbers[index]);
-      }
-    }
-    if (arrayForCheck.length >= maxDividersForPrimeNum) {
-      answer = 'no';
-    }
-    if (arrayForCheck.length < maxDividersForPrimeNum) {
-      answer = 'yes';
-    }
+    isPrimeNumber(question) ? answer = 'yes' : answer = 'no';
     return [question, answer];
   };
   gameEngine(gameRules, getBrainPrime);
