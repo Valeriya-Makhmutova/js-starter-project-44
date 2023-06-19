@@ -5,9 +5,8 @@ import generateNumber from '../helpers/number-generator.js';
 const isEvenNumber = (number) => {
   if (number % 2 === 0) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 };
 
 const startEvenOrNotGame = () => {
@@ -18,8 +17,12 @@ const startEvenOrNotGame = () => {
     let answer = '';
     const question = generateNumber(1, 50);
 
-    isEvenNumber(question) ? answer = 'yes' : answer = 'no';
-    
+    if (isEvenNumber(question)) {
+      answer = 'yes';
+    } else {
+      answer = 'no';
+    }
+
     return [question, answer];
   };
   gameEngine(gameRules, getBrainEven);

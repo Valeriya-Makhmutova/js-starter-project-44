@@ -2,7 +2,7 @@
 import askNameAndGreet from '../../src/helpers/cli.js';
 
 const startBrainGames = () => {
-    askNameAndGreet();
+  askNameAndGreet();
 };
 
 startBrainGames();
