@@ -15,7 +15,6 @@ const generateProgression = (lengthOfProgression = 10) => {
 
 const startComplitProgressionGame = () => {
   const task = 'What number is missing in the progression?';
-  const gameRules = [task];
 
   const getBrainProgression = () => {
     const lengthOfProgression = 10;
@@ -28,7 +27,7 @@ const startComplitProgressionGame = () => {
     return [question, answer];
   };
 
-  gameEngine(gameRules, getBrainProgression);
+  gameEngine(task, getBrainProgression);
 };
 
 export default startComplitProgressionGame;

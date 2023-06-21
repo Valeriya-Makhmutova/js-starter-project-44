@@ -11,7 +11,6 @@ const isEvenNumber = (number) => {
 
 const startEvenOrNotGame = () => {
   const task = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const gameRules = [task];
 
   const getBrainEven = () => {
     let answer = '';
@@ -25,7 +24,7 @@ const startEvenOrNotGame = () => {
 
     return [question, answer];
   };
-  gameEngine(gameRules, getBrainEven);
+  gameEngine(task, getBrainEven);
 };
 
 export default startEvenOrNotGame;

@@ -25,7 +25,6 @@ const calculateExpression = (num1, operator, num2) => {
 
 const startCalculationGame = () => {
   const task = 'What is the result of the expression?';
-  const gameRules = [task];
 
   const operations = ['+', '-', '*'];
 
@@ -38,7 +37,7 @@ const startCalculationGame = () => {
     const answer = calculateExpression(firstNumber, operation, secondNumber);
     return [question, answer];
   };
-  gameEngine(gameRules, getBrainCalc);
+  gameEngine(task, getBrainCalc);
 };
 
 export default startCalculationGame;

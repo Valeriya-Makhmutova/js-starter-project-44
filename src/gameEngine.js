@@ -1,8 +1,7 @@
 import readlineSync from 'readline-sync';
 
-const gameEngine = (gameRules, gameFunction) => {
+const gameEngine = (task, gameFunction) => {
   const repeats = 3;
-  const [task] = gameRules;
 
   console.log('Welcome to the Brain Games!');
   console.log('May I have your name?');

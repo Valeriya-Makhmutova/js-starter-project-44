@@ -14,7 +14,6 @@ const isPrimeNumber = (number) => {
 
 const startPrimeOrNotNumberGame = () => {
   const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const gameRules = [task];
 
   const getBrainPrime = () => {
     let answer = '';
@@ -27,7 +26,7 @@ const startPrimeOrNotNumberGame = () => {
     }
     return [question, answer];
   };
-  gameEngine(gameRules, getBrainPrime);
+  gameEngine(task, getBrainPrime);
 };
 
 export default startPrimeOrNotNumberGame;
