@@ -9,8 +9,7 @@ const gameEngine = (task, gameFunction) => {
   console.log(`Hello, ${name}!`);
 
   console.log(task);
-  let i = 0;
-  for (; i < repeats; i += 1) {
+  for (let i = 1; i <= repeats; i += 1) {
     const [question, answer] = gameFunction();
     console.log(`Question: ${question}`);
     let userAnswer = null;
@@ -25,9 +24,9 @@ const gameEngine = (task, gameFunction) => {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'\nLet's try again, ${name}!`);
       break;
     }
-  }
-  if (i === repeats) {
-    console.log(`Congratulations, ${name}!`);
+    if (i === repeats) {
+      console.log(`Congratulations, ${name}!`);
+    }
   }
 };
 
