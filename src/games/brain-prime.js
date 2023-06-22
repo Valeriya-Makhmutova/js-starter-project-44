@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import gameEngine from '../gameEngine.js';
+import createGame from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
 
 const isPrimeNumber = (number) => {
@@ -26,7 +26,7 @@ const startPrimeOrNotNumberGame = () => {
     }
     return [question, answer];
   };
-  gameEngine(task, getBrainPrime);
+  createGame(task, getBrainPrime);
 };
 
 export default startPrimeOrNotNumberGame;

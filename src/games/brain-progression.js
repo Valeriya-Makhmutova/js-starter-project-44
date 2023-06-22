@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import gameEngine from '../gameEngine.js';
+import createGame from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
 
 const generateProgression = (lengthOfProgression = 10) => {
@@ -27,7 +27,7 @@ const startComplitProgressionGame = () => {
     return [question, answer];
   };
 
-  gameEngine(task, getBrainProgression);
+  createGame(task, getBrainProgression);
 };
 
 export default startComplitProgressionGame;

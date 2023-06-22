@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import gameEngine from '../gameEngine.js';
+import createGame from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
 
 const isEvenNumber = (number) => {
@@ -24,7 +24,7 @@ const startEvenOrNotGame = () => {
 
     return [question, answer];
   };
-  gameEngine(task, getBrainEven);
+  createGame(task, getBrainEven);
 };
 
 export default startEvenOrNotGame;

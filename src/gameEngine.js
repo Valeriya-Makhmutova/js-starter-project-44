@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const gameEngine = (task, gameFunction) => {
+const createGame = (task, getRoundData) => {
   const repeats = 3;
 
   console.log('Welcome to the Brain Games!');
@@ -10,7 +10,7 @@ const gameEngine = (task, gameFunction) => {
 
   console.log(task);
   for (let i = 1; i <= repeats; i += 1) {
-    const [question, answer] = gameFunction();
+    const [question, answer] = getRoundData();
     console.log(`Question: ${question}`);
     let userAnswer = null;
     if (typeof answer === 'number') {
@@ -30,4 +30,4 @@ const gameEngine = (task, gameFunction) => {
   }
 };
 
-export default gameEngine;
+export default createGame;

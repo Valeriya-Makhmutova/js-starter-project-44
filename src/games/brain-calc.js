@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import gameEngine from '../gameEngine.js';
+import createGame from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
 
 const calculateExpression = (num1, operator, num2) => {
@@ -37,7 +37,7 @@ const startCalculationGame = () => {
     const answer = calculateExpression(firstNumber, operation, secondNumber);
     return [question, answer];
   };
-  gameEngine(task, getBrainCalc);
+  createGame(task, getBrainCalc);
 };
 
 export default startCalculationGame;

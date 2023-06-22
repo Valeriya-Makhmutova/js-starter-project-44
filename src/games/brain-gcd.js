@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import gameEngine from '../gameEngine.js';
+import createGame from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
 
 const getGeneralDivider = (a, b) => {
@@ -26,7 +26,7 @@ const startGreatestCommonDivisorGame = () => {
     return [question, answer];
   };
 
-  gameEngine(task, getBrainGcd);
+  createGame(task, getBrainGcd);
 };
 
 export default startGreatestCommonDivisorGame;
