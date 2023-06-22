@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
 const createGame = (task, getRoundData) => {
-  const repeats = 3;
+  const maxRoundCount = 3;
 
   console.log('Welcome to the Brain Games!');
   console.log('May I have your name?');
@@ -9,7 +9,7 @@ const createGame = (task, getRoundData) => {
   console.log(`Hello, ${name}!`);
 
   console.log(task);
-  for (let i = 1; i <= repeats; i += 1) {
+  for (let i = 1; i <= maxRoundCount; i += 1) {
     const [question, answer] = getRoundData();
     console.log(`Question: ${question}`);
     let userAnswer = null;
@@ -22,12 +22,10 @@ const createGame = (task, getRoundData) => {
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'\nLet's try again, ${name}!`);
-      break;
-    }
-    if (i === repeats) {
-      console.log(`Congratulations, ${name}!`);
+      return;
     }
   }
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default createGame;
