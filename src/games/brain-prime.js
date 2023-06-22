@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import createGame from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
 
