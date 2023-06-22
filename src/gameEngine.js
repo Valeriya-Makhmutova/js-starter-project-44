@@ -12,13 +12,8 @@ const createGame = (task, getRoundData) => {
   for (let i = 1; i <= maxRoundCount; i += 1) {
     const [question, answer] = getRoundData();
     console.log(`Question: ${question}`);
-    let userAnswer = null;
-    if (typeof answer === 'number') {
-      userAnswer = Number(readlineSync.question('Your answer:'));
-    } else {
-      userAnswer = readlineSync.question('Your answer:');
-    }
-    if (answer === userAnswer) {
+    const userAnswer = readlineSync.question('Your answer:');
+    if (String(answer) === userAnswer) {
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'\nLet's try again, ${name}!`);
