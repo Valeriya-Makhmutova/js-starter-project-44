@@ -2,12 +2,7 @@
 import createGame from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
 
-const isEvenNumber = (number) => {
-  if (number % 2 === 0) {
-    return true;
-  }
-  return false;
-};
+const isEvenNumber = (number) => number % 2 === 0;
 
 const startEvenOrNotGame = () => {
   const task = 'Answer "yes" if the number is even, otherwise answer "no".';
