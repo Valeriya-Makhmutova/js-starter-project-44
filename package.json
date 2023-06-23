@@ -8,12 +8,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "brain-games": "bin/games/brain-games-cli.js",
-    "brain-even": "bin/games/brain-even-cli.js",
-    "brain-calc": "bin/games/brain-calc-cli.js",
-    "brain-gcd": "bin/games/brain-gcd-cli.js",
-    "brain-progression": "bin/games/brain-progression-cli.js",
-    "brain-prime": "bin/games/brain-prime-cli.js"
+    "brain-games": "bin/brain-games-cli.js",
+    "brain-even": "bin/brain-even-cli.js",
+    "brain-calc": "bin/brain-calc-cli.js",
+    "brain-gcd": "bin/brain-gcd-cli.js",
+    "brain-progression": "bin/brain-progression-cli.js",
+    "brain-prime": "bin/brain-prime-cli.js"
   },
   "repository": {
     "type": "git",
