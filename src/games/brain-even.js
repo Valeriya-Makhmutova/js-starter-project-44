@@ -8,15 +8,8 @@ const startEvenOrNotGame = () => {
   const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   const getBrainEven = () => {
-    let answer = '';
     const question = generateNumber(1, 50);
-
-    if (isEvenNumber(question)) {
-      answer = 'yes';
-    } else {
-      answer = 'no';
-    }
-
+    const answer = isEvenNumber(question) ? 'yes' : 'no';
     return [question, answer];
   };
   createGame(task, getBrainEven);
