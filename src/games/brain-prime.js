@@ -4,7 +4,7 @@ import generateNumber from '../helpers/number-generator.js';
 const isPrimeNumber = (number) => {
   if (number === 1) return false;
   for (let i = 2; i <= number; i += 1) {
-    if ((number % i === 0 && number !== i) || number === 1) {
+    if (number % i === 0 && number !== i) {
       return false;
     }
   }
