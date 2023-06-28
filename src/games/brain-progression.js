@@ -2,13 +2,11 @@ import createGame from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
 
 const generateProgression = (number, different, lengthOfProgression = 10) => {
-  const array = [];
-  let numberOfProgression = number;
-  for (let i = 0; i < lengthOfProgression; i += 1) {
-    array.push(numberOfProgression);
-    numberOfProgression += different;
+  const progression = [number];
+  for (let i = 1; i < lengthOfProgression; i += 1) {
+    progression[i] = (progression[i - 1] + different);
   }
-  return array;
+  return progression;
 };
 
 const startComplitProgressionGame = () => {
@@ -20,7 +18,7 @@ const startComplitProgressionGame = () => {
     const lengthOfProgression = 10;
 
     const progression = generateProgression(startNumber, different, lengthOfProgression);
-    const indexOfMissingNumber = generateNumber(1, progression.length);
+    const indexOfMissingNumber = generateNumber(0, progression.length - 1);
     const answer = progression[indexOfMissingNumber];
     progression[indexOfMissingNumber] = '..';
     const question = progression.join(' ');
