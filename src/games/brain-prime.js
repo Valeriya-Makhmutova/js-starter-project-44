@@ -2,9 +2,9 @@ import createGame from '../gameEngine.js';
 import generateNumber from '../helpers/number-generator.js';
 
 const isPrimeNumber = (number) => {
-  if (number === 1) return false;
-  for (let i = 2; i <= number; i += 1) {
-    if (number % i === 0 && number !== i) {
+  if (number < 2) return false;
+  for (let i = 2; i < number; i += 1) {
+    if (number % i === 0) {
       return false;
     }
   }
