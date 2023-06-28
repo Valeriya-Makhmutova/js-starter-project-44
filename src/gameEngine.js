@@ -16,7 +16,7 @@ const createGame = (task, getRoundData) => {
     if (String(answer) !== userAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'\nLet's try again, ${name}!`);
       return;
-    } 
+    }
     console.log('Correct!');
   }
   console.log(`Congratulations, ${name}!`);
