@@ -13,12 +13,11 @@ const createGame = (task, getRoundData) => {
     const [question, answer] = getRoundData();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer:');
-    if (String(answer) === userAnswer) {
-      console.log('Correct!');
-    } else {
+    if (String(answer) !== userAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'\nLet's try again, ${name}!`);
       return;
-    }
+    } 
+    console.log('Correct!');
   }
   console.log(`Congratulations, ${name}!`);
 };
