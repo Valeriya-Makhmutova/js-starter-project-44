@@ -8,9 +8,9 @@ export const askUserName = () => {
 
 export const greeting = () => {
   console.log('Welcome to the Brain Games!');
-}
+};
 
 export const askAnswer = () => {
   const answer = readlineSync.question('Your answer: ');
   return answer;
-}
+};
