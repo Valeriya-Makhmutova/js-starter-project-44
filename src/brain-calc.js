@@ -8,7 +8,7 @@ const playCalc = () => {
   console.log(`Hello, ${userName}!`);
 
   console.log('What is the result of the expression?');
-  
+
   for (let i = 0; i < 3; i += 1) {
     const randomNumber1 = Math.floor(Math.random() * 50);
     const randomNumber2 = Math.floor(Math.random() * 10);
@@ -36,6 +36,6 @@ const playCalc = () => {
       console.log(`Congratulations, ${userName}!`);
     }
   }
-}
+};
 
 export default playCalc;
