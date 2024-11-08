@@ -17,14 +17,14 @@ export const askAnswer = () => {
 
 export const giveMeGcD = (a, b) => {
 
-  while (a !== 0 & b !== 0){
+  while (a !== 0 & b !== 0) {
 
     if (a > b) {
-        a = a % b;
+      a = a % b;
     } else {
       b = b % a;
     }
-}
+  }
   return a + b;
 }
 
@@ -37,7 +37,7 @@ export const giveProgression = () => {
   const signForMissingPlace = '..';
 
   const randomLength = Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength;
-  
+
   const randomIndexPlase = Math.floor(Math.random() * randomLength + 1) - 1;
 
   const randomDifference = Math.floor(Math.random() * 15) + 1;
@@ -55,11 +55,24 @@ export const giveProgression = () => {
       resultArray.push(currentNumber);
     }
   }
-  const answer =  resultArray[randomIndexPlase];
+  const answer = resultArray[randomIndexPlase];
 
   resultArray[randomIndexPlase] = signForMissingPlace;
   resultSet.push(answer);
   resultSet.push(resultArray);
-  
+
   return resultSet;// возвращает набор из ответа и самой прогрессии(с пропущенным числом)
+}
+
+export const isItPrime = (number) => {
+  if (number === 1 || number === 0) {
+    return false;
+  }
+
+  for (let i = 2; i < number; i += 1) {
+    if (number % i === 0) {
+      return false
+    }
+  }
+  return true;
 }
