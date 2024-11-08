@@ -1,4 +1,9 @@
-import { greeting, askUserName, askAnswer, giveProgression } from './cli.js';
+import {
+  greeting,
+  askUserName,
+  askAnswer,
+  giveProgression,
+} from './cli.js';
 
 const playInBrainProgression = () => {
   greeting();

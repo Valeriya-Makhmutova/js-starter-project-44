@@ -15,18 +15,18 @@ export const askAnswer = () => {
   return answer;
 };
 
-export const giveMeGcD = (a, b) => {
-
-  while (a !== 0 & b !== 0) {
-
+export const giveMeGcD = (num1, num2) => {
+  let a = num1;
+  let b = num2;
+  while (a !== 0 && b !== 0) {
     if (a > b) {
-      a = a % b;
+      a %= b;
     } else {
-      b = b % a;
+      b %= a;
     }
   }
   return a + b;
-}
+};
 
 export const giveProgression = () => {
   const minLength = 5;
@@ -41,9 +41,9 @@ export const giveProgression = () => {
   const randomIndexPlase = Math.floor(Math.random() * randomLength + 1) - 1;
 
   const randomDifference = Math.floor(Math.random() * 15) + 1;
-  //разница между числами в прогрессии от 1 до 15
+  // разница между числами в прогрессии от 1 до 15
   const randomFirstNumber = Math.floor(Math.random() * 9) + 1;
-  //первый член прогрессии от 1 до 9
+  // первый член прогрессии от 1 до 9
   let currentNumber = 0;
 
   for (let i = 0; i < randomLength; i += 1) {
@@ -61,8 +61,8 @@ export const giveProgression = () => {
   resultSet.push(answer);
   resultSet.push(resultArray);
 
-  return resultSet;// возвращает набор из ответа и самой прогрессии(с пропущенным числом)
-}
+  return resultSet; // возвращает набор из ответа и самой прогрессии(с пропущенным числом)
+};
 
 export const isItPrime = (number) => {
   if (number === 1 || number === 0) {
@@ -71,8 +71,8 @@ export const isItPrime = (number) => {
 
   for (let i = 2; i < number; i += 1) {
     if (number % i === 0) {
-      return false
+      return false;
     }
   }
   return true;
-}
+};

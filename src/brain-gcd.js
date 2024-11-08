@@ -1,4 +1,9 @@
-import { greeting, askUserName, askAnswer, giveMeGcD } from './cli.js';
+import {
+  greeting,
+  askUserName,
+  askAnswer,
+  giveMeGcD,
+} from './cli.js';
 
 const playInBrainGcd = () => {
   greeting();
