@@ -14,3 +14,16 @@ export const askAnswer = () => {
   const answer = readlineSync.question('Your answer: ');
   return answer;
 };
+
+export const giveMeGcD = (a, b) => {
+
+  while (a !== 0 & b !== 0){
+
+    if (a > b) {
+        a = a % b;
+    } else {
+      b = b % a;
+    }
+}
+  return a + b;
+}
